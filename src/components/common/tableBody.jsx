@@ -3,15 +3,19 @@ import _ from 'lodash'
 
 
 class TableBody extends Component {
+  renderCellLink = (item) =>{
+    return <span style={{color: 'green'}}>item.title</span>
+  }
   renderCell = (item,column) => {
+    if(column.label === 'Title') this.renderCellLink(item)
+    
     if(column.content) return column.content(item)
-
     return _.get(item, column.path)
   }
-
   createKey = (item, column) => {
     return item._id + (column.path || column.key)
   }
+  
   render() {
     const {data, columns} = this.props
     return ( 
