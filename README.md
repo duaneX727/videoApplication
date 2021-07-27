@@ -72,3 +72,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 # adding Router
 # npm i react-router-dom@4.3.1 
 # videoApplication added Routing functionality
+# videoApplication added Error handling,Registration form page
+# progress as of 7/26/21
